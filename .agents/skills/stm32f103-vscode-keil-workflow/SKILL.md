@@ -15,9 +15,16 @@ Use this skill when the user wants VS Code/Codex for writing firmware and Keil M
 
 ## Responsibilities by application
 
-- **VS Code + Codex:** inspect requirements and source, edit `main.c` and reusable `.c/.h` modules, update the Keil project file/group when adding source files, review diffs, and keep changes under Git.
+- **VS Code + Codex:** inspect requirements and source, edit `main.c` and reusable `.c/.h` modules, update the Keil project file/group when adding source files, and review diffs.
 - **Keil µVision:** compile the `.uvprojx` target, inspect compiler/linker output, start an ST-LINK debug session, run/step and inspect variables/registers, then download and verify the firmware on the board.
 - VS Code editing or IntelliSense alone does not compile or flash this project. Do not introduce a separate GCC/CMake build path unless requested.
+
+## Local code and Git
+
+- Keep firmware edits local by default. Building, debugging, and downloading do not require a Git commit.
+- Do not run `git add`, create commits, push branches, or open pull requests for user firmware changes unless the user explicitly asks for that operation.
+- Use VS Code's Source Control view or `git diff` to review local changes. If the user asks to commit but not publish, commit locally and stop; push only when explicitly requested.
+- This rule applies to firmware work. Repository documentation/Skill changes may be committed and pushed when the user explicitly asks to update the GitHub repository.
 
 ## Edit → build → debug → download loop
 

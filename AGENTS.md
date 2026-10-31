@@ -11,3 +11,4 @@
 - For requests involving analog sensors, ADC setup, or the MCU's internal temperature sensor, use `$stm32f103c8t6-adc-sensing`.
 - For requests to coordinate editing in VS Code/Codex with Keil build, debug, or download, use `$stm32f103-vscode-keil-workflow`.
 - For routine source/project work, use `$stm32f103-keil-vscode`.
+- Keep firmware edits local by default. Do not commit or push user code unless the user explicitly asks for that Git operation.

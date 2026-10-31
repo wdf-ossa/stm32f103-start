@@ -15,6 +15,8 @@ Install the recommended extensions shown by VS Code: OpenAI Codex and Microsoft 
 
 Use VS Code/Codex to write and review the firmware source. Open the same `start.uvprojx` checkout in Keil MDK to compile, debug, and download using the STM32F1 device pack and configured ST-LINK. Keep both applications pointed at the same repository folder; do not build one copy and flash another. This repository does not provide a standalone GCC/CMake build. Preserve the STM32F103C8 target and its startup/RTE/memory settings.
 
+Firmware edits stay local by default; you can build, debug, and download without committing. Codex should not commit or push firmware changes unless you explicitly request it.
+
 The firmware entry point is intentionally empty. Add only modules needed by the next task. A user-provided board photo and its visible components/header labels are documented in `docs/start-board-photo-notes.md`; no schematic is included, so treat unseen connections and electrical details as unverified.
 
 ## Codex project skills

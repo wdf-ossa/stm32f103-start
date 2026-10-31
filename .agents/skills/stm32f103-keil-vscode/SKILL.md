@@ -20,6 +20,8 @@ Use for STM32F103 C projects opened from their repository root in VS Code with C
 
 Open the cloned repository folder, not an individual source file. Keep durable project constraints in `AGENTS.md`, hardware facts in board documentation, and this skill limited to the reusable development workflow. Repository-local skills live under `.agents/skills/`.
 
+For the user's split IDE workflow (VS Code/Codex writes source; Keil compiles, debugs, and downloads), use `$stm32f103-vscode-keil-workflow` for the concrete edit-build-debug-flash handoff.
+
 For a task that needs an MCU pin choice, peripheral routing, or a module inventory, use `$stm32f103c8t6-hardware-planning`. Its pin matrix describes STM32F103C8T6 silicon capabilities only; the physical `start` board has no checked-in schematic or verified module wiring.
 
 ## Stop and ask for missing evidence

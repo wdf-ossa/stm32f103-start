@@ -13,13 +13,14 @@ Install the recommended extensions shown by VS Code: OpenAI Codex and Microsoft 
 
 ## Build and flash
 
-The Keil project is `start.uvprojx`. VS Code is the editor/AI workspace; use Keil MDK and the STM32F1 device pack to compile and the configured ST-LINK path to flash. This repository does not provide a standalone GCC/CMake build. Preserve the STM32F103C8 target and its startup/RTE/memory settings.
+Use VS Code/Codex to write and review the firmware source. Open the same `start.uvprojx` checkout in Keil MDK to compile, debug, and download using the STM32F1 device pack and configured ST-LINK. Keep both applications pointed at the same repository folder; do not build one copy and flash another. This repository does not provide a standalone GCC/CMake build. Preserve the STM32F103C8 target and its startup/RTE/memory settings.
 
 The firmware entry point is intentionally empty. Add only modules needed by the next task. A user-provided board photo and its visible components/header labels are documented in `docs/start-board-photo-notes.md`; no schematic is included, so treat unseen connections and electrical details as unverified.
 
 ## Codex project skills
 
 - `.agents/skills/stm32f103-keil-vscode/SKILL.md`: project discovery, Keil/RTE preservation, module structure, and build/flash workflow.
+- `.agents/skills/stm32f103-vscode-keil-workflow/SKILL.md`: VS Code/Codex source editing with Keil build, debug, and download loop.
 - `.agents/skills/stm32f103c8t6-hardware-planning/SKILL.md`: STM32F103C8T6 pin/peripheral planning, module interface candidates, and board-wiring evidence rules.
 - `.agents/skills/stm32f103c8t6-peripheral-integration/SKILL.md`: clock and common on-chip peripheral bring-up/integration.
 - `.agents/skills/stm32f103c8t6-adc-sensing/SKILL.md`: analog acquisition and internal temperature-sensor constraints.

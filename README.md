@@ -1,10 +1,18 @@
-# STM32F103C8 Keil 空白模板
+# STM32F103C8 Keil blank template
 
-本仓库仅保留 Keil/RTE 工程骨架和 Codex skill，不含原 PC13 闪灯逻辑或任何外设驱动。
+Clone this repository and open the folder in VS Code. Open the repository root so Codex can read `AGENTS.md` and `.agents/skills/stm32f103-keil-vscode/SKILL.md`.
 
-- `start.uvprojx`：Keil 工程，Source Group 只含空白 `main.c`。
-- `RTE/`、`DebugConfig/`：器件启动和 RTE 配置。
-- `.agents/skills/stm32f103-start-keil/SKILL.md`：本工程 Codex skill。
-- `AGENTS.md`：项目级约定。
+## Quick start
 
-尚无第二块板的原理图/引脚图；不可据此模板推断 PC13 接有 LED，也不能照搬另一块板的引脚表。Keil 打开 `start.uvprojx`，确认芯片/Pack/Arm Compiler 后按 F7。
+```powershell
+git clone https://github.com/wdf-ossa/stm32f103-start.git
+code stm32f103-start
+```
+
+Install the recommended extensions shown by VS Code: OpenAI Codex and Microsoft C/C++ IntelliSense. The recommendations are in `.vscode/extensions.json`.
+
+## Build and flash
+
+The Keil project is `start.uvprojx`. VS Code is the editor/AI workspace; use Keil MDK and the STM32F1 device pack to compile and the configured ST-LINK path to flash. This repository does not provide a standalone GCC/CMake build. Preserve the STM32F103C8 target and its startup/RTE/memory settings.
+
+The firmware entry point is intentionally empty. Add only modules needed by the next task. No board schematic is included, so do not assume any particular on-board LED or pin wiring.

@@ -20,6 +20,8 @@ Use for STM32F103 C projects opened from their repository root in VS Code with C
 
 Open the cloned repository folder, not an individual source file. Keep durable project constraints in `AGENTS.md`, hardware facts in board documentation, and this skill limited to the reusable development workflow. Repository-local skills live under `.agents/skills/`.
 
+For a task that needs an MCU pin choice, peripheral routing, or a module inventory, use `$stm32f103c8t6-hardware-planning`. Its pin matrix describes STM32F103C8T6 silicon capabilities only; the physical `start` board has no checked-in schematic or verified module wiring.
+
 ## Stop and ask for missing evidence
 
 Ask for board documentation when a task requires pin assignment, external voltage limits, or peripheral wiring that the repository does not establish. Ask before changing the project's framework, linker map, startup/vector table, or target device when the requested behavior can be implemented without that migration.

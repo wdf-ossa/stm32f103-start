@@ -1,5 +1,7 @@
 # `start` board: known modules and wiring status
 
+Photo-derived observations are recorded in [`docs/start-board-photo-notes.md`](../../../../docs/start-board-photo-notes.md). Treat them as visual evidence, not a substitute for the schematic.
+
 ## Confirmed from this repository
 
 | Item | Status | Evidence |
@@ -8,11 +10,13 @@
 | Package target | LQFP48 is implied by the T package suffix in STM32F103C8T6 | ST ordering code / datasheet |
 | Framework | Keil µVision project with ARM Compiler 6 and Keil STM32F1 RTE/device pack configuration | `start.uvprojx` |
 | Firmware entry | `main.c` is intentionally blank in this repository | `main.c` |
-| Physical board model/revision | Unknown | No board model or schematic is checked in |
-| On-board LED/button/buzzer/display/sensor modules | Unknown and unverified | No board-level schematic or module inventory is checked in |
-| Header/connector pin mapping | Unknown and unverified | No pinout image or connector map is checked in |
+| Physical board model/revision | Unknown | No exact board model/revision or schematic is checked in |
+| Visible board parts | USB-C connector, 8.000 MHz crystal, regulator package, `PWR` and `PC13` LED markings, reset switch, BOOT0-labeled jumper block | User-provided product photo; actual unit and circuit details not independently inspected |
+| On-board buzzer/display/sensor | Not visible in the provided photo; presence is not established | User-provided product photo only |
+| Header labels | GPIO/power labels are visible; the photo notes list readable groups | User-provided product photo; exact connector order should be checked against the physical board |
+| Electrical wiring and module pin mapping | Unverified | Requires schematic, board documentation, or continuity measurement |
 
-Do not describe candidate MCU signals as actual board module connections. Do not infer installed modules from the MCU feature set or from a similarly named development board.
+Do not describe candidate MCU signals as actual board module connections. Do not infer installed modules from the MCU feature set or from a similarly named development board. A visible `PC13` marking near an LED suggests a connection, but does not establish polarity, resistor path, or electrical behavior.
 
 ## Module inventory template
 

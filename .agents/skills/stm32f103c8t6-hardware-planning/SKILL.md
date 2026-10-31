@@ -10,14 +10,14 @@ Use this skill for pin selection, peripheral routing, module planning, or board-
 ## Evidence boundary
 
 - The project target is STM32F103C8 in LQFP48, and the user identifies the chip as STM32F103C8T6.
-- This repository does not include the physical `start` board schematic, board revision, or verified module list.
+- A user-provided product photo is summarized in `docs/start-board-photo-notes.md`; this repository still does not include the physical board schematic, exact revision, or verified electrical module map.
 - The pin matrix is derived from the MCU package and ST documentation. It describes silicon capability only; it does not establish which pins are routed to headers, LEDs, buttons, sensors, or other board parts.
-- Do not copy the learning-board mapping or assume the board is a Blue Pill clone. Keep board-level wiring `unverified` until supported by a schematic, board documentation, or user confirmation.
+- Do not copy the learning-board mapping or assume unseen wiring from a similar board. Keep board-level wiring `unverified` until supported by a schematic, board documentation, or user confirmation.
 - The listed routes are useful examples, not a complete alternate-function catalog.
 
 ## Before proposing a pin map
 
-1. Read [board inventory and module status](references/board-modules.md).
+1. Read [photo observations](../../../docs/start-board-photo-notes.md) and [board inventory and module status](references/board-modules.md).
 2. Read [MCU pin matrix](references/mcu-pin-matrix.md) for candidate functions and package constraints.
 3. Inspect the project's current source, RTE settings, clock setup, and `.uvprojx` before selecting a peripheral instance or changing clocks.
 4. Ask for the board schematic or exact module/connector pinout when a task requires confirmed physical connections, voltage levels, pull-ups, or active polarity. Continue with architecture or a clearly labeled candidate map when possible.
@@ -52,5 +52,6 @@ Do not infer a module from an MCU peripheral. For example, I2C support does not 
 
 - [MCU pin matrix](references/mcu-pin-matrix.md): package GPIOs, common bus candidates, debug/boot/oscillator constraints.
 - [Board modules](references/board-modules.md): confirmed facts, unknown wiring, and the inventory template to fill when board documents are provided.
+- [Board photo notes](../../../docs/start-board-photo-notes.md): visible parts and pin-header silkscreen groups; not an electrical schematic.
 - [ST STM32F103C8 datasheet](https://www.st.com/resource/en/datasheet/stm32f103c8.pdf).
 - [ST RM0008 reference manual](https://www.st.com/resource/en/reference_manual/cd00171190.pdf).

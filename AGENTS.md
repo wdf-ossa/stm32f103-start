@@ -7,4 +7,6 @@
 - Preserve STM32F103C8, startup/vector setup, RTE, and 64 KB Flash/20 KB RAM unless asked to change them.
 - Keep `main.c` minimal and add future features as separate modules. Report physical validation separately from compilation.
 - For requests involving pin choice, module wiring, alternate-function conflicts, or board inventory, use `$stm32f103c8t6-hardware-planning` and read its relevant references before proposing a mapping.
+- For requests implementing or bringing up I2C, SPI, USART, timers/PWM, EXTI, DMA, clocks, or watchdogs, use `$stm32f103c8t6-peripheral-integration`.
+- For requests involving analog sensors, ADC setup, or the MCU's internal temperature sensor, use `$stm32f103c8t6-adc-sensing`.
 - For routine source/project work, use `$stm32f103-keil-vscode`.

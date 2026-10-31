@@ -2,6 +2,8 @@
 
 Photo-derived observations are recorded in [`docs/start-board-photo-notes.md`](../../../../docs/start-board-photo-notes.md). Treat them as visual evidence, not a substitute for the schematic.
 
+For silicon capabilities and electrical limits, see [`docs/stm32f103c8t6-quick-reference.md`](../../../../docs/stm32f103c8t6-quick-reference.md).
+
 ## Confirmed from this repository
 
 | Item | Status | Evidence |

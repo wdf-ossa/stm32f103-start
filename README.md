@@ -21,6 +21,9 @@ The firmware entry point is intentionally empty. Add only modules needed by the 
 
 - `.agents/skills/stm32f103-keil-vscode/SKILL.md`: project discovery, Keil/RTE preservation, module structure, and build/flash workflow.
 - `.agents/skills/stm32f103c8t6-hardware-planning/SKILL.md`: STM32F103C8T6 pin/peripheral planning, module interface candidates, and board-wiring evidence rules.
+- `.agents/skills/stm32f103c8t6-peripheral-integration/SKILL.md`: clock and common on-chip peripheral bring-up/integration.
+- `.agents/skills/stm32f103c8t6-adc-sensing/SKILL.md`: analog acquisition and internal temperature-sensor constraints.
 - `docs/start-board-photo-notes.md`: visible parts and silkscreen observations from the user's board photo.
+- `docs/stm32f103c8t6-quick-reference.md`: short device-specific facts distilled from the STM32F103x8/xB data manual.
 
 The hardware skill separates MCU-supported pin functions from physical connections. The exact `start` board schematic and its installed module list are not present in this repository, so candidate pins must not be reported as confirmed board wiring.

@@ -12,6 +12,7 @@ Primary sources:
 - Device family target: STM32F103C8, Cortex-M3, medium-density line.
 - Package suffix `T`: LQFP48. Package pin numbers below are for this package only.
 - C8 memory target used by this Keil project: 64 KiB Flash and 20 KiB SRAM.
+- The STM32F103C8 LQFP48 exposes 10 external ADC channels (PA0-PA7 and PB0-PB1), plus internal ADC channels. Larger package variants may expose more external channels.
 - GPIO port pins and peripheral alternate functions are multiplexed. A pin can serve only one selected function at a time.
 - Oscillator, reset, BOOT, power, and debug pins are not interchangeable with general board connector labels.
 
@@ -65,6 +66,8 @@ The matrix intentionally omits a complete pin-function enumeration. Check the of
 | USART3 | PB10 TX, PB11 RX | Conflicts with I2C2 default route |
 | SPI1 | PA4 NSS, PA5 SCK, PA6 MISO, PA7 MOSI | Alternate remap involves debug-related pins; preserve SWD and verify AFIO settings |
 | ADC1/ADC2 | PA0-PA7, PB0-PB1 | Package analog channels; preserve analog range and pin configuration |
+
+For ADC clock, analog supply/reference, sampling time, and calibration guidance, read [the device quick reference](../../../../docs/stm32f103c8t6-quick-reference.md). Do not use ADC as a GPIO on an analog input pin at the same time.
 
 ## Resource-conflict checklist
 
